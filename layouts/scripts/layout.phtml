@@ -1,0 +1,42 @@
+<?php
+    // Created meta tag Content-Type
+    $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+    // Specify separator-character in tag title
+    $this->headTitle()->setSeparator(' :: ');
+    // Define the content of tag title
+    $this->headTitle('News portal');
+     
+    // Denoted doctype, which input from application.ini
+    echo $this->doctype();
+?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <?php
+        // Output meta tag
+        echo $this->headMeta();
+    ?>
+    <?php
+        // Output head
+        echo $this->headTitle();
+    ?>
+    <?php
+        // Attached the style table
+        echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/site.css');
+    ?>
+</head>
+<body>
+    <div id="content">
+        <h1>
+        <?php
+            // Output head, which is each of view
+            echo $this->escape($this->title);
+        ?>
+        </h1>
+        <?php
+            // Output content of view
+            echo $this->layout()->content;
+        ?>
+    </div>
+</body>
+</html>

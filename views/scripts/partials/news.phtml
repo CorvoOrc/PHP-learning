@@ -1,0 +1,10 @@
+<tr>
+    <td>
+        <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'show', 'id' => $this->id), null, true);?>"
+                           title="Full">
+        <img src="<?php echo "/images/".($this->image_path);?>" height="93" alt="Preview" /></a>
+    </td>
+    <td><?php echo $this->escape($this->header);?></td>
+    <td><?php echo $this->escape($this->date);?></td>
+    <td><?php echo $this->escape($this->text);?></td>
+</tr>

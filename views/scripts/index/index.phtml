@@ -1,0 +1,16 @@
+<?php
+// Create head of page which upload in layout
+$this->title = "News portal";
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller'=>'index','action'=>'add'));?>">Add news</a></p>
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Header</th>
+        <th>Date</th>
+        <th>Text</th>
+    </tr>
+    <?php echo $this->partialLoop('partials/news.phtml', $this->news);?>
+</table>
+<p><a href="<?php echo $this->url(array('controller'=>'index','action'=>'add'));?>">Add news</a></p>
